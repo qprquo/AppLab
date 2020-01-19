@@ -1,0 +1,14 @@
+// https://github.com/pugjs/pug/issues/166
+mixin item(title, url)
+  div( class='menu__item' + (active == title ? ' menu__item--active' : '') )
+    a(href=url) #{title}    
+
+header.header
+  .container
+    a.header__logo(href="#") App
+      span Lab
+    div.header__menu.menu
+      each navItem in htmlWebpackPlugin.options.global.navMenu
+        +item(navItem.title, navItem.link)
+      .header__buttons
+        button(class="button", type="button") Try for free

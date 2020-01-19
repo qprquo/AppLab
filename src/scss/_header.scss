@@ -1,0 +1,138 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  height: $header-height;
+  line-height: 1;
+  $parent: &;
+  border-bottom: 1px solid rgba($white, 0.1);
+
+  & > .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__menu-toggle {
+    padding: 15px;
+    background-color: $white;
+    border: none;
+    // color: $primary-darken;
+    svg {
+      fill: currentColor;
+    }
+    display: none;
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+  }
+
+  &__logo {
+    font-size: 30px;
+    font-weight: 700;
+    &,
+    &:hover {
+      color: $secondary;
+      span {
+        color: $accent;
+      }
+    }
+  }
+
+  &__buttons {
+    margin-left: 32px;
+  }
+
+  &__menu {
+    align-items: center;
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: 32px;
+    color: $accent;
+    .menu__item {
+      &--active {
+        // color: $primary-darken;
+      }
+
+      & > a {
+        padding: 0 20px;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  &__button {
+    padding: 17px 57px;
+    font-weight: 700;
+    border-radius: 100px;
+    display: inline-block;
+    background-color: $primary;
+    color: $white;
+    font-weight: 700;
+    font-size: 20px;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+      color: $white;
+    }
+  }
+
+  &__close {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    // color: $primary-darken;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    @include media-breakpoint-down(sm) {
+      display: inline-block;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    height: 64px;
+    background-color: $white;
+  }
+}
+
+.mobile-menu-is-shown {
+  overflow: hidden;
+  @include media-breakpoint-down(sm) {
+    .header__menu {
+      position: relative;
+      padding: 45px 20px 20px 20px;
+      align-items: stretch;
+      display: flex;
+      flex-direction: column;
+      background-color: $white;
+      position: fixed;
+      margin-right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow-y: auto;
+      .menu__item {
+        a {
+          padding: 20px;
+        }
+      }
+    }
+
+    .header__buttons {
+      margin-top: auto;
+      margin-left: 0;
+      text-align: center;
+      .button {
+        display: inline-block;
+      }
+    }
+  }
+}

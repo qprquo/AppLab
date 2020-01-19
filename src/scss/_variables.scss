@@ -1,0 +1,46 @@
+$container-max-widths: (
+  sm: 600px,
+  md: 920px,
+  lg: 1100px,
+  xl: 1170px
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 900px,
+  lg: 1070px,
+  xl: 1200px
+) !default;
+
+
+$black: #000;
+$primary: #2500f9;
+$accent: #242f51;
+$secondary: #feb540;
+$h1-font-size: 3.75rem;
+$h2-font-size: 2.1875rem;
+$h3-font-size: 1.875rem;
+$h4-font-size: 0.875rem;
+
+$headings-font-weight: 700;
+$headings-line-height: 1.4;
+$headings-font-family: "Playfair Display", serif;
+// $headings-color: $primary-darken;
+
+$orange: #fc6a42;
+$pink: #f5989d;
+$green: #82ca9c;
+
+$font-size-base: 1rem;
+$line-height-base: 1.75;
+
+$header-color: #e1e1e1;
+$text-muted: #67676d;
+$body-color: #616368;
+$yellow-light: #fcec64;
+
+$font-family-base: "Poppins", sans-serif;
+
+$header-height: 250px;
+$hero-height: 1000px

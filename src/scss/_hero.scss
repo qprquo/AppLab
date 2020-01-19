@@ -1,0 +1,54 @@
+.hero {
+  position: relative;
+  z-index: 1;
+  padding-top: $header-height;
+  height: $hero-height;
+  background-color: #fdfdfe;
+
+  @extend %background-image;
+  background-position: bottom;
+  background-size: 100% auto;
+  background-image: url("../images/hero.jpg");
+
+  &__title {
+    /* // font-size: 48px;
+    font-weight: 700; */
+    font-family: "Playfair Display", serif;
+  }
+
+  &__bg-object {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @extend %background-image;
+    background-position: bottom center;
+    background-size: cover;
+    background-image: url("../images/bg-object.svg");
+  }
+
+  &__subheading {
+    // font-size: 20px;
+    margin-bottom: 80px;
+    color: rgba($primary, 0.6);
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__text {
+  }
+
+  &__award {
+    
+  }
+
+  /* &::before {
+    position: absolute;
+    
+    background-position: bottom left;
+    content: '';
+    background-image: url('../images/hero.png');
+  } */
+}

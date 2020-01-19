@@ -1,0 +1,25 @@
+{
+  "title": "AppLab",
+  "navMenu": [
+    {
+      "title": "Home",
+      "link": "#"
+    },
+    {
+      "title": "Key Features",
+      "link": "#"
+    },
+    {
+      "title": "Pricing",
+      "link": "#"
+    },
+    {
+      "title": "Testimonial",
+      "link": "#"
+    },
+    {
+      "title": "Faq",
+      "link": "#"
+    }
+  ]
+}

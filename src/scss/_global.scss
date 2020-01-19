@@ -1,0 +1,140 @@
+%reset-list {
+  display: flex;
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+%background-image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+%reset-button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
+:focus {
+  outline: none;
+}
+
+nput[type="text"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type="text"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  @include media-breakpoint-down(sm) {
+    font-size: 16px;
+  }
+}
+
+.learn-more {
+  font-weight: 700;
+  &__arrow {
+    display: inline-block;
+    margin-left: 0.875rem;
+  }
+}
+
+a {
+  color: inherit;
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.dropdown-menu {
+  margin-top: 20px;
+  box-shadow: $box-shadow;
+  border: none;
+  
+  @include media-breakpoint-down(sm) {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 0;
+    box-shadow: none;
+    position: static;
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+.dropdown-item {
+  color: $body-color;
+  padding: 10px 15px;
+}
+
+.content-wrapper {
+  /* margin: 0 auto;
+  max-width: 2000px; */
+}
+
+.heading {
+  margin-bottom: 65px;
+  font-size: 52px;
+
+  &--hero {
+    font-size: 48px;
+  }
+
+  &--resources {
+    margin-bottom: 144px;
+  }
+
+  &--libraries {
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
+  }
+
+  &--create-library {
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
+  }
+
+  &--resource {
+    font-size: 32px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 30px;
+    margin-bottom: 40px;
+    &--resource {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.to-top {
+  .button--to-top {
+    opacity: 1;
+    visibility: visible;
+    // display: inline-block;
+  }
+}
+
+.aos-container {
+  overflow-x: hidden;
+}

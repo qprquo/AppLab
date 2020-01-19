@@ -1,0 +1,14 @@
+.button {
+  background-color: $primary;
+  font-weight: 700;
+  padding: 20px 40px;
+  border-radius: 100px;
+  display: inline-block;
+  background-color: $primary;
+  color: $white;
+  border: none;
+  &:hover {
+    background-color: darken($primary, 10%);
+    color: $white;
+  }
+}
