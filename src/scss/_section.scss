@@ -3,138 +3,73 @@
   padding-bottom: 130px;
   $parent: &;
 
-  &--no-padding {
-    padding-top: 0;
-    padding-bottom: 0;
+  &__subheading {
+    margin-bottom: 80px;
   }
 
   &__heading {
-    color: #fdc800;
-
   }
 
-  &--libraries {
-    position: relative;
+  @include media-breakpoint-down(lg) {
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 
-  &--create-library {
-    position: relative;
-    #{$parent}__button {
-      margin-right: 30px;
-    }
-    #{$parent}__phone {
-      @extend %background-image;
-      background-image: url("../images/phone.png");
-      background-size: contain;
+  &--trusted {
+  }
+
+  &--features {
+    #{$parent}__image--ellipse {
       position: absolute;
-      bottom: 0;
-      right: 20px;
-      padding: 12px 15px 12px 15px;
+      // top: calc(50% - 587px / 2);
+      left: -86px;
+      width: 115%;
+    }
+    #{$parent}__image--phone {
+      width: 100%;
+      height: auto;
+      transform: rotate(-15deg) translateX(-5%) translateY(-10%);
+    }
+  }
 
-      img {
-        height: 500px;
-        width: auto;
-      }
-
-      @include media-breakpoint-down(sm) {
-        position: static;
-        display: inline-block;
-        margin-bottom: 20px;
-        img {
-          width: 100%;
-          height: auto;
-          // height: 300px;
-        }
+  &--jackpots {
+    #{$parent}__heading {
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: #b9b9b8;
       }
     }
+
+    #{$parent}__heading-container {
+      margin-bottom: 110px;
+    }
+  }
+
+  &--designed {
+    #{$parent}__image {
+      position: absolute;
+      top: -130px;
+      left: 0;
+      @include media-breakpoint-down(lg) {
+        top: -70px;
+      }
+    }
+    #{$parent}__content {
+      padding-left: 100px;
+    }
+    .container--offset {
+      padding-left: $grid-gutter-width / 2;
+    }
+  }
+
+  &__content {
   }
 
   &__image {
-    position: static;
-    &::before {
-      @extend %background-image;
-      background-size: contain;
-      background-position: left;
-      position: absolute;
-      z-index: -1;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 50%;
-      content: "";
-    }
-
-    &--hero {
-    }
-
-    &--library {
-      &::before {
-        background-image: url("../images/picture_app.svg");
-        background-position: right bottom;
-        right: 0;
-        width: 50%;
-        left: auto;
-      }
-
-      @include media-breakpoint-down(sm) {
-        text-align: center;
-
-        &::before {
-          content: none;
-        }
-      }
-    }
-
-    &--libraries {
-      &::before {
-        background-image: url("../images/picture_libraries.svg");
-      }
-
-      @include media-breakpoint-down(sm) {
-        height: 150px;
-        &::before {
-          top: 0;
-          background-position: top left;
-          background-size: contain;
-          display: inline-block;
-          width: 100%;
-          height: 150px;
-        }
-      }
-    }
-
-    &--hero {
-      position: static;
-      &::before {
-        z-index: -1;
-        width: 60%;
-        background-position: right;
-        background-image: url("../images/picture_app_top.svg");
-        right: 0;
-        left: auto;
-        background-position: top right;
-      }
-
-      @include media-breakpoint-down(sm) {
-        height: 100px;
-        &::before {
-          top: 0;
-          background-position: top right;
-          background-size: auto 200px;
-          display: inline-block;
-          width: 100%;
-        }
-      }
-    }
-  }
-
-  &__text {
-    // color: rgba($primary, 0.6);
-    margin-bottom: 64px;
-  }
-
-  @include media-breakpoint-down(sm) {
-    padding-top: 30px;
-    padding-bottom: 30px;
   }
 }

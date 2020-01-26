@@ -18,8 +18,65 @@
       "link": "#"
     },
     {
-      "title": "Faq",
+      "title": "FAQ",
       "link": "#"
+    }
+  ],
+  "banners": [
+    {
+      "src": "images/southwest.png"
+    },
+    {
+      "src": "images/anubis.png"
+    },
+    {
+      "src": "images/alonzo.png"
+    },
+    {
+      "src": "images/express.png"
+    },
+    {
+      "src": "images/maniac.png"
+    }
+  ],
+  "features": [
+    {
+      "title": "Fast Performance",
+      "description": "Get your blood tests delivered at home collect a sample from the news your blood tests.",
+      "class": "feature--red",
+      "icon": "icon--red icon--speed"
+    },
+    {
+      "title": "Prototyping",
+      "description": "Get your blood tests delivered at home collect a sample from the news your blood tests.",
+      "class": "feature--blue",
+      "icon": "icon--blue icon--prototyping"
+    },
+    {
+      "title": "Vector Editing",
+      "description": "Get your blood tests delivered at home collect a sample from the news your blood tests.",
+      "class": "feature--green",
+      "icon": "icon--green icon--vector"
+    }
+  ],
+  "jackpots": [
+    {
+      "title": "Automatic Payouts",
+      "description": "Get your blood tests delivered at home collect a sample from the news your blood tests.",
+      "class": "feature--red feature--column",
+      "icon": "icon--red icon--bill"
+    },
+    {
+      "title": "Network Effect",
+      "description": "Get your blood tests delivered at home collect a sample from the news your blood tests.",
+      "class": "feature--blue feature--column",
+      "icon": "icon--blue icon--network"
+    },
+    {
+      "title": "Bigger Rewards Method",
+      "description": "Get your blood tests delivered at home collect a sample from the news your blood tests.",
+      "class": "feature--green feature--column",
+      "icon": "icon--green icon--badge"
     }
   ]
 }

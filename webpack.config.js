@@ -6,6 +6,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const fs = require('fs');
 const data = require('./data/data');
+const FileManagerPlugin = require('filemanager-webpack-plugin');
 
 const TEMPLATES_DIR = './src/templates/pages';
 const TEMPLATES = fs.readdirSync(TEMPLATES_DIR).filter(filename => filename.endsWith('.pug'));
@@ -44,14 +45,23 @@ module.exports = (env, argv) => {
         filename: 'css/[name].css',
         chunkFilename: '[id].css',
       }),
-      new CopyPlugin([
-        //        { context: 'src/', from: '**/*.html' },
-        { from: 'src/images', to: 'images' }
-      ]),
+      new FileManagerPlugin({
+        onStart: {
+          copy: [
+            { source: 'src/images', destination: 'dist/images' },
+          ]
+        },
+        onEnd: {
+          copy: [
+            { source: 'dist', destination: 'docs' },
+          ]
+        }
+      }),
       ...TEMPLATES.map(template => new HtmlWebpackPlugin({
         template: `${TEMPLATES_DIR}/${template}`,
         filename: `./${template.replace(/\.pug/, '.html')}`,
-        global: data
+        global: data,
+        minify: false,
       }))
     ],
     devServer: {
@@ -71,6 +81,9 @@ module.exports = (env, argv) => {
         {
           test: /\.pug$/,
           loader: 'pug-loader',
+          query: {
+            pretty: true
+          }
         },
         {
           test: /\.js$/,

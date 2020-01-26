@@ -4,7 +4,8 @@
   left: 0;
   right: 0;
   z-index: 2;
-  height: $header-height;
+  padding-top: 90px;
+  padding-bottom: 0;
   line-height: 1;
   $parent: &;
   border-bottom: 1px solid rgba($white, 0.1);
@@ -97,8 +98,12 @@
   }
 
   @include media-breakpoint-down(sm) {
-    height: 64px;
+    // height: 64px;
     background-color: $white;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 40px 0;
   }
 }
 
@@ -135,4 +140,5 @@
       }
     }
   }
+  
 }

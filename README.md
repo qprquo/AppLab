@@ -1,4 +1,4 @@
-# Sevi - landing page
+# AppLab - landing page
 This is an implementation of psd template provided by [ Arifur Rahman Tushar ](https://dribbble.com/ArifurRahman)
 
 ## Build

@@ -1,3 +1,5 @@
+include ../mixins/mixins
+
 block variables
 
 html(lang="en")
@@ -11,5 +13,6 @@ html(lang="en")
     block head
   body
     include ../partial/header
-    block content
+    main.content-wrapper
+      block content
     block scripts
