@@ -1,0 +1,10 @@
+mixin banner(item)
+  div(class!=attributes.class + ' banners__item')
+    img(src=item.src)
+
+mixin feature(item)
+  div(class!='feature ' + item.class)
+    div(class="feature__icon icon " + item.icon)
+    .feature__content
+      h4.feature__title #{item.title}
+      p.feature__description #{item.description}
