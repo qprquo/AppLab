@@ -1,0 +1,145 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$badge-name: 'badge';
+$badge-x: 0px;
+$badge-y: 0px;
+$badge-offset-x: 0px;
+$badge-offset-y: 0px;
+$badge-width: 58px;
+$badge-height: 58px;
+$badge-total-width: 174px;
+$badge-total-height: 116px;
+$badge-image: '../images/sprite.png';
+$badge: (0px, 0px, 0px, 0px, 58px, 58px, 174px, 116px, '../images/sprite.png', 'badge', );
+$bill-name: 'bill';
+$bill-x: 58px;
+$bill-y: 0px;
+$bill-offset-x: -58px;
+$bill-offset-y: 0px;
+$bill-width: 58px;
+$bill-height: 58px;
+$bill-total-width: 174px;
+$bill-total-height: 116px;
+$bill-image: '../images/sprite.png';
+$bill: (58px, 0px, -58px, 0px, 58px, 58px, 174px, 116px, '../images/sprite.png', 'bill', );
+$network-name: 'network';
+$network-x: 0px;
+$network-y: 58px;
+$network-offset-x: 0px;
+$network-offset-y: -58px;
+$network-width: 58px;
+$network-height: 58px;
+$network-total-width: 174px;
+$network-total-height: 116px;
+$network-image: '../images/sprite.png';
+$network: (0px, 58px, 0px, -58px, 58px, 58px, 174px, 116px, '../images/sprite.png', 'network', );
+$prototyping-name: 'prototyping';
+$prototyping-x: 116px;
+$prototyping-y: 0px;
+$prototyping-offset-x: -116px;
+$prototyping-offset-y: 0px;
+$prototyping-width: 58px;
+$prototyping-height: 56px;
+$prototyping-total-width: 174px;
+$prototyping-total-height: 116px;
+$prototyping-image: '../images/sprite.png';
+$prototyping: (116px, 0px, -116px, 0px, 58px, 56px, 174px, 116px, '../images/sprite.png', 'prototyping', );
+$speed-name: 'speed';
+$speed-x: 116px;
+$speed-y: 56px;
+$speed-offset-x: -116px;
+$speed-offset-y: -56px;
+$speed-width: 58px;
+$speed-height: 54px;
+$speed-total-width: 174px;
+$speed-total-height: 116px;
+$speed-image: '../images/sprite.png';
+$speed: (116px, 56px, -116px, -56px, 58px, 54px, 174px, 116px, '../images/sprite.png', 'speed', );
+$vector-name: 'vector';
+$vector-x: 58px;
+$vector-y: 58px;
+$vector-offset-x: -58px;
+$vector-offset-y: -58px;
+$vector-width: 58px;
+$vector-height: 58px;
+$vector-total-width: 174px;
+$vector-total-height: 116px;
+$vector-image: '../images/sprite.png';
+$vector: (58px, 58px, -58px, -58px, 58px, 58px, 174px, 116px, '../images/sprite.png', 'vector', );
+$spritesheet-width: 174px;
+$spritesheet-height: 116px;
+$spritesheet-image: '../images/sprite.png';
+$spritesheet-sprites: ($badge, $bill, $network, $prototyping, $speed, $vector, );
+$spritesheet: (174px, 116px, '../images/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

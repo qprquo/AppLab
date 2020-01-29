@@ -10,11 +10,6 @@
   &__heading {
   }
 
-  @include media-breakpoint-down(lg) {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-
   &--trusted {
   }
 
@@ -53,17 +48,11 @@
   &--designed {
     #{$parent}__image {
       position: absolute;
-      top: -130px;
-      left: 0;
-      @include media-breakpoint-down(lg) {
-        top: -70px;
-      }
+      right: 0;
+      height: 100%;
+      width: auto;
     }
     #{$parent}__content {
-      padding-left: 100px;
-    }
-    .container--offset {
-      padding-left: $grid-gutter-width / 2;
     }
   }
 
@@ -71,5 +60,15 @@
   }
 
   &__image {
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  &--no-padding {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }

@@ -110,54 +110,12 @@ a {
   }
 }
 
-.icon {
-  @extend %background-image;
-  width: 88px;
-  height: 88px;
-  border-radius: 50%;
-  background-size: auto;
 
-  &--speed {
-    background-image: url("../images/speed.png");
-  }
-
-  &--vector {
-    background-image: url("../images/vector.png");
-  }
-
-  &--prototyping {
-    background-image: url("../images/prototyping.png");
-  }
-
-  &--bill {
-    background-image: url("../images/bill.png");
-  }
-
-  &--network {
-    background-image: url("../images/network.png");
-  }
-
-  &--badge {
-    background-image: url("../images/badge.png");
-  }
-
-  &--red {
-    background-color: #ffecef;
-  }
-
-  &--blue {
-    background-color: #f4f4ff;
-  }
-
-  &--green {
-    background-color: #e4ffee;
-  }
-}
 
 .container {
   &--offset {
-    padding-left: percentage(1/12);
-    padding-right: percentage(1/12);
+    padding-left: percentage(1/20);
+    padding-right: percentage(1/20);
   }
 
   @include media-breakpoint-down(md) {

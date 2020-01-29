@@ -7,6 +7,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const fs = require('fs');
 const data = require('./data/data');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
+const SpritesmithPlugin = require('webpack-spritesmith');
+const path = require('path');
 
 const TEMPLATES_DIR = './src/templates/pages';
 const TEMPLATES = fs.readdirSync(TEMPLATES_DIR).filter(filename => filename.endsWith('.pug'));
@@ -57,6 +59,20 @@ module.exports = (env, argv) => {
           ]
         }
       }),
+      new SpritesmithPlugin({
+        src: {
+          cwd: path.resolve(__dirname, 'src/sprites'),
+          glob: '*.png'
+        },
+        target: {
+          image: path.resolve(__dirname, 'src/images/sprite.png'),
+          css: path.resolve(__dirname, 'src/scss/sprites/_sprite.scss')
+        }, 
+        apiOptions: {
+          cssImageRef: "../images/sprite.png",
+
+        }
+      }),
       ...TEMPLATES.map(template => new HtmlWebpackPlugin({
         template: `${TEMPLATES_DIR}/${template}`,
         filename: `./${template.replace(/\.pug/, '.html')}`,
@@ -91,6 +107,11 @@ module.exports = (env, argv) => {
             {
               loader: "babel-loader",
             }
+          ]
+        },
+        {
+          test: /\.png$/, use: [
+            'file-loader?name=i/[hash].[ext]'
           ]
         },
         {

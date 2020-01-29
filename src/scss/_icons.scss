@@ -1,0 +1,53 @@
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  line-height: 88px;
+  text-align: center;
+  border-radius: 50%;
+  background-size: auto;
+
+  &::before {
+    @extend %background-image;
+    background-size: auto;
+    content: "";
+  }
+
+  &--speed::before {
+    @include sprite($speed);
+  }
+
+  &--vector::before {
+    @include sprite($vector);
+  }
+
+  &--prototyping::before {
+    @include sprite($prototyping);
+  }
+
+  &--bill::before {
+    @include sprite($bill);
+  }
+
+  &--network::before {
+    @include sprite($network);
+  }
+
+  &--badge::before {
+    @include sprite($badge);
+  }
+
+  &--red {
+    background-color: #ffecef;
+  }
+
+  &--blue {
+    background-color: #f4f4ff;
+  }
+
+  &--green {
+    background-color: #e4ffee;
+  }
+}

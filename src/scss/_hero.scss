@@ -1,9 +1,8 @@
 .hero {
   position: relative;
   z-index: 1;
-  padding-top: 56px + 90px;
-  padding-bottom: 16px;
-  // height: $hero-height-xl;
+  padding-top: 240px;
+  padding-bottom: 60px;
   background-color: #fdfdfe;
 
   @extend %background-image;
@@ -62,8 +61,10 @@
   }
 
   &__phone {
-    width: 100%;
+    width: 70%;
     height: auto;
+    box-shadow: $phone-box-shadow;
+    border-radius: 50px;
   }
 
   &__content {
