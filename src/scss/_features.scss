@@ -28,6 +28,7 @@
   &--column {
     flex-direction: column;
     align-items: flex-start;
+    padding-right: 40px;
     #{$parent}__icon {
       margin-right: 0;
       margin-bottom: 30px;

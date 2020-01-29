@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   z-index: 1;
-  padding-top: 240px;
+  padding-top: $header-height;
   padding-bottom: 60px;
   background-color: #fdfdfe;
 
@@ -61,10 +61,12 @@
   }
 
   &__phone {
-    width: 70%;
+    width: 90%;
     height: auto;
+    background-color: #e6eaeb;
     box-shadow: $phone-box-shadow;
-    border-radius: 50px;
+    border-radius: 56px;
+    margin-top: -40px;
   }
 
   &__content {

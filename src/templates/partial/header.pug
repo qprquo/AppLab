@@ -6,8 +6,9 @@ header.header
   .container
     a.header__logo(href="#") App
       span Lab
-    div.header__menu.menu
-      each navItem in htmlWebpackPlugin.options.global.navMenu
-        +item(navItem.title, navItem.link)
+    .header__inner
+      ul.header__menu.menu
+        each navItem in htmlWebpackPlugin.options.global.navMenu
+          +item(navItem.title, navItem.link)
       .header__buttons
         button(class="button", type="button") Try for free

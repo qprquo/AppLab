@@ -13,6 +13,14 @@
   &--trusted {
   }
 
+  &--pt-0 {
+    padding-top: 0;
+  }
+
+  &--pb-0 {
+    padding-bottom: 0;
+  }
+
   &--features {
     #{$parent}__image--ellipse {
       position: absolute;
