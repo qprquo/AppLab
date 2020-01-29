@@ -8,7 +8,10 @@ const fs = require('fs');
 const data = require('./data/data');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
 const SpritesmithPlugin = require('webpack-spritesmith');
+const SvgSpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const path = require('path');
+const glob = require('glob').sync;
+
 
 const TEMPLATES_DIR = './src/templates/pages';
 const TEMPLATES = fs.readdirSync(TEMPLATES_DIR).filter(filename => filename.endsWith('.pug'));
@@ -20,8 +23,8 @@ module.exports = (env, argv) => {
     entry: {
       app: [
         "./src/js/app.js",
-        "./src/scss/style.scss"
-      ]
+        "./src/scss/style.scss",
+      ],
     },
     output: {
       filename: 'js/[name].js',
@@ -67,10 +70,16 @@ module.exports = (env, argv) => {
         target: {
           image: path.resolve(__dirname, 'src/images/sprite.png'),
           css: path.resolve(__dirname, 'src/scss/sprites/_sprite.scss')
-        }, 
+        },
         apiOptions: {
           cssImageRef: "../images/sprite.png",
 
+        }
+      }),
+      new SvgSpriteLoaderPlugin({
+        plainSprite: true,
+        spriteAttrs: {
+          id: 'spriteSheet'
         }
       }),
       ...TEMPLATES.map(template => new HtmlWebpackPlugin({
@@ -146,6 +155,15 @@ module.exports = (env, argv) => {
               }
             }
           ]
+        },
+        {
+          test: /\.svg$/,
+          loader: 'svg-sprite-loader',
+          include: path.resolve(__dirname, 'src/sprites'),
+          options: {
+            // Hack
+            spriteFilename: '../src/images/sprite.svg',
+          }
         },
       ]
     }

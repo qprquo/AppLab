@@ -110,8 +110,6 @@ a {
   }
 }
 
-
-
 .container {
   &--offset {
     padding-left: percentage(1/20);
@@ -122,4 +120,10 @@ a {
     padding-left: $grid-gutter-width / 2;
     padding-right: $grid-gutter-width / 2;
   }
+}
+
+#spriteSheet {
+  position: absolute;
+  width: 0;
+  height: 0;
 }
