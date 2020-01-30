@@ -15,7 +15,7 @@ $grid-breakpoints: (
 
 $black: #000;
 $primary: #2500f9;
-$accent: #242f51;
+$accent: #242f51; 
 $secondary: #feaa25;
 $white: #fff;
 $h1-font-size: 3.75rem;
@@ -48,5 +48,9 @@ $hero-height-lg: 800px;
 $header-padding-top: 90px;
 $header-padding-bottom: 90px;
 $header-height: $header-padding-top + 56px + $header-padding-bottom;
+
+$section-padding-y: 288px;
+
+$container-offset-padding-x: 120px;
 
 $phone-box-shadow: 4px 4px 20px 5px rgba($black, 0.1) 

@@ -18,6 +18,13 @@
   background-color: transparent;
 }
 
+%phone-mockup {
+  box-shadow: $phone-box-shadow;
+  border-radius: 56px;
+  background-color: #fff;
+  background-color: #e6eaeb;
+}
+
 :focus {
   outline: none;
 }
@@ -112,8 +119,8 @@ a {
 
 .container {
   &--offset {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: $container-offset-padding-x / 2;
+    padding-right: $container-offset-padding-x / 2;
   }
 
   @include media-breakpoint-down(md) {

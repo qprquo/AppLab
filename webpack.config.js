@@ -160,8 +160,10 @@ module.exports = (env, argv) => {
           loader: 'svg-sprite-loader',
           include: path.resolve(__dirname, 'src/sprites'),
           options: {
-            // Hack
             spriteFilename: '../src/images/sprite.svg',
+            spriteAttrs: {
+              id: 'spriteSheet'
+            }
           }
         },
       ]

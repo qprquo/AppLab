@@ -1,6 +1,6 @@
 .section {
-  padding-top: 130px;
-  padding-bottom: 130px;
+  padding-top: $section-padding-y / 2;
+  padding-bottom: $section-padding-y / 2;
   $parent: &;
 
   &__subheading {
@@ -22,16 +22,19 @@
   }
 
   &--features {
+    padding-top: 150px;
     #{$parent}__image--ellipse {
       position: absolute;
       // top: calc(50% - 587px / 2);
-      left: -86px;
-      width: 115%;
+      left: -$container-offset-padding-x / 2;
+      width: 100%;
     }
     #{$parent}__image--phone {
-      width: 100%;
+      @extend %phone-mockup;
+      width: 65%;
       height: auto;
-      transform: rotate(-15deg) translateX(-5%) translateY(-10%);
+      transform-origin: center;
+      transform: rotate(-15deg) translateX(10%);
     }
   }
 
@@ -45,6 +48,16 @@
         bottom: 0;
         width: 1px;
         background-color: #b9b9b8;
+      }
+    }
+
+    #{$parent}__heading-spacer {
+      &--left {
+        padding-left: 48px;
+      }
+
+      &--right {
+        padding-right: 48px;
       }
     }
 
@@ -64,6 +77,30 @@
     }
   }
 
+  &--what-we-built {
+    #{$parent}__image--ellipse {
+      position: absolute;
+      z-index: -1;
+      top: 40px;
+      bottom: 40px;
+      width: auto;
+    }
+
+    #{$parent}__image--phone-first {
+      @extend %phone-mockup;
+      transform: rotate(-15deg) translateY(10%);
+      width: 80%;
+    }
+
+    #{$parent}__image--phone-second {
+      transform: translateY(15%);
+      position: absolute;
+      left: 32%;
+      top: 10%;
+      max-width: 120%;
+    }
+  }
+
   &__content {
   }
 
@@ -71,8 +108,8 @@
   }
 
   @include media-breakpoint-down(lg) {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 114px / 2;
+    padding-bottom: 114px / 2;
   }
 
   &--no-padding {

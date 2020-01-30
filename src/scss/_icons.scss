@@ -39,15 +39,51 @@
     @include sprite($badge);
   }
 
+  &--web-design::before {
+    @include sprite($web-design);
+  }
+
+  &--trophy::before {
+    @include sprite($trophy);
+  }
+
+  &--computer::before {
+    @include sprite($computer);
+  }
+
+  &--customer-support::before {
+    @include sprite($customer-support);
+  }
+
+  &--customer-service::before {
+    @include sprite($customer-service);
+  }
+
+  &--ui::before {
+    @include sprite($ui);
+  }
+
   &--red {
     background-color: #ffecef;
   }
 
   &--blue {
-    background-color: #f4f4ff;
+    background-color: #eaf9ff;
   }
 
   &--green {
     background-color: #e4ffee;
+  }
+
+  &--gray {
+    background-color: #f4f4ff;
+  }
+
+  &--orange {
+    background-color: #fff6d3;
+  }
+
+  &--red-light {
+    background-color: #fdeee4;
   }
 }

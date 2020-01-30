@@ -1,5 +1,4 @@
 .button {
-  background-color: $primary;
   font-weight: 700;
   padding: 20px 40px;
   border-radius: 100px;
@@ -10,6 +9,10 @@
   &:hover {
     background-color: darken($primary, 10%);
     color: $white;
+  }
+
+  &--lg {
+    padding: 20px 60px;
   }
 
   &--link {

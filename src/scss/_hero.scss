@@ -61,12 +61,13 @@
   }
 
   &__phone {
+    @extend %phone-mockup;
     width: 90%;
     height: auto;
-    background-color: #e6eaeb;
-    box-shadow: $phone-box-shadow;
-    border-radius: 56px;
     margin-top: -40px;
+    @include media-breakpoint-down(lg) {
+      margin-top: 0;
+    }
   }
 
   &__content {

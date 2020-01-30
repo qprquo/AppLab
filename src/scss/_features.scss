@@ -35,6 +35,15 @@
     }
   }
 
+  &--center {
+    align-items: center;
+    #{$parent}__title,
+    #{$parent}__description {
+      text-align: center;
+    }
+    
+  }
+
   &--red {
     #{$parent}__title {
       color: #f55767;

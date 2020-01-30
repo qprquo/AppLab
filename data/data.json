@@ -78,5 +78,69 @@
       "class": "feature--green feature--column",
       "icon": "icon--green icon--badge"
     }
+  ],
+  "pros": [
+    {
+      "title": "App Development",
+      "description": "Get your blood tests delivered at home collect a sample from the news your blood tests.",
+      "class": "feature--column feature--center",
+      "icon": "icon--red icon--web-design"
+    },
+    {
+      "title": "10 Times Award",
+      "description": "Get your blood tests delivered at home collect a sample from the news your blood tests.",
+      "class": "feature--column feature--center",
+      "icon": "icon--blue icon--trophy"
+    },
+    {
+      "title": "Cloud Storage",
+      "description": "Get your blood tests delivered at home collect a sample from the news your blood tests.",
+      "class": "feature--column feature--center",
+      "icon": "icon--orange icon--computer"
+    },
+    {
+      "title": "Customization",
+      "description": "Get your blood tests delivered at home collect a sample from the news your blood tests.",
+      "class": "feature--column feature--center",
+      "icon": "icon--green icon--customer-support"
+    },
+    {
+      "title": "UX Planning",
+      "description": "Get your blood tests delivered at home collect a sample from the news your blood tests.",
+      "class": "feature--column feature--center",
+      "icon": "icon--gray icon--ui"
+    },
+    {
+      "title": "Customer Support",
+      "description": "Get your blood tests delivered at home collect a sample from the news your blood tests.",
+      "class": "feature--column feature--center",
+      "icon": "icon--red-light icon--customer-service"
+    }
+  ],
+  "built": [
+    {
+      "title": "App Development",
+      "description": "Get your blood tests delivered at home collect a sample from the news your blood tests.",
+      "class": "feature--column",
+      "icon": "icon--red icon--web-design"
+    },
+    {
+      "title": "UX Planning",
+      "description": "Get your blood tests delivered at home collect a sample from the news your blood tests.",
+      "class": "feature--column",
+      "icon": "icon--blue icon--ui"
+    },
+    {
+      "title": "Cloud Storage",
+      "description": "Get your blood tests delivered at home collect a sample from the news your blood tests.",
+      "class": "feature--column",
+      "icon": "icon--orange icon--computer"
+    },
+    {
+      "title": "Customer Support",
+      "description": "Get your blood tests delivered at home collect a sample from the news your blood tests.",
+      "class": "feature--column",
+      "icon": "icon--gray icon--customer-service"
+    }
   ]
 }

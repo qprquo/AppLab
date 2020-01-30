@@ -10,7 +10,7 @@ block content
         .col-7.hero__content
           .hero__award
             .hero__award-icon
-              svg(width="18", height="18")              
+              svg(width="18" height="18")
                 use(xlink:href="#award")
             | #1 Editiors Choice App of 2020
           h1.hero__title Best app for your modern lifestyle
@@ -20,18 +20,18 @@ block content
             a(href="#" class="button button--link") Watch demo video
         .col
           img(src="images/screen-1.svg" class="hero__phone" alt="App")
-  section.section.section--trusted
+  section.section.section--trusted.pb-0
     .container.container--offset
       h2.section__heading.heading.heading--trusted Trusted by companies like
       .banners.banners--trusted.row
         each item in htmlWebpackPlugin.options.global.banners
           +banner(item)(class="col-2")
-  section.section.section--features.pt-0.pb-0
+  section.section.section--features.pb-0
     .container.container--offset
       .row
         .col.d-flex.flex-column.justify-content-center
           img(src="images/ellipse-1.png" class="section__image section__image--ellipse" alt="ellipse")
-          img(src="images/phone-2.svg" class="section__image section__image--phone" alt="features")
+          img(src="images/screen-2.svg" class="section__image section__image--phone" alt="features")
         .col
           h2.section__heading.heading.heading--features Awesome app <br> features
           p.section__subheading Increase productivity with a simple to-do app. app for managing your personal budgets.
@@ -41,11 +41,11 @@ block content
   section.section.section--jackpots
     .container.container--offset
       .row.section__heading-container
-        .col
+        .col.section__heading-spacer.section__heading-spacer--right
           h2.section__heading.heading.heading--jackpots.
             Smart jackpots that you may love this 
             anytime & anywhere
-        .col.ml-md-4.d-flex.align-items-center
+        .col.d-flex.align-items-center.section__heading-spacer.section__heading-spacer--left
           p.section__subheading.mb-0.
             The rise of mobile devices transforms the way we
             consume information entirely and the world's most
@@ -68,7 +68,42 @@ block content
             The rise of mobile devices transforms the way we
             consume information entirely and the world's most
             elevant channels such as Facebook.
-          a(href="#" class="button") Learn More
+          a(href="#" class="button button--lg") Learn More
+  section.section.section--why-choose.pb-0
+    .container.container--offset
+      h3.section__heading.heading.heading--why-choose.text-center Why you should choose our app
+      p.section__subheading.text-center.
+        The rise of mobile devices transforms the way we consume information entirely <br>
+        and the world's most elevant channels such as Facebook.
+      .row
+        each item in htmlWebpackPlugin.options.global.pros
+          .col-4
+            +feature(item)
+  section.section.section--what-we-built
+    .container.container--offset
+      .row
+        .col-8
+          h3.section__heading.heading.heading--what-we-built Ultimate features <br> that we built
+          p.section__subheading.
+            The rise of mobile devices transforms the way we <br>
+            consume information entirely.
+          .row
+            each item in htmlWebpackPlugin.options.global.built
+              .col-6
+                +feature(item)
+          a(href="#" class="button button--lg") See all
+        .col.d-flex.flex-column.justify-content-center
+          img(src="images/elipses-2.png" class="section__image section__image--ellipse" alt="ellipse")
+          img(src="images/phone-3.svg" class="section__image section__image--phone-first" alt="ellipse")
+          img(src="images/phone-4.png" class="section__image section__image--phone-second" alt="ellipse")
+
+
+
+
+
+
+
+
 
 
 
