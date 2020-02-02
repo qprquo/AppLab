@@ -1,11 +1,8 @@
 import './bootstrap';
 import 'bootstrap/js/dist/dropdown';
-import AOS from 'aos';
+import './switch';
+import 'slick-carousel';
 
-AOS.init({
-  delay: 200,
-  duration: 1500,
-});
 
 $(() => {
   const body = $('body');
@@ -30,4 +27,13 @@ $(() => {
   $('.button--to-top').click((e) => {
     $('html,body').animate({ scrollTop: 0 }, 'slow');
   })
+
+  $('.testimonial-slider').slick({
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  });
+ 
+
+
 });

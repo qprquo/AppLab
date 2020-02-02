@@ -1,6 +1,7 @@
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/aos/dist/aos";
+@import "../../node_modules/slick-carousel/slick/slick";
 
 // override and add new variables
 @import "variables";
@@ -28,6 +29,7 @@
 
 @import "resources";
 @import "global";
+@import "sliders";
 @import "section";
 @import "menu";
 @import "header";
@@ -37,3 +39,5 @@
 @import "banners";
 @import "features";
 @import "icons";
+@import "planning-card";
+@import "switch";

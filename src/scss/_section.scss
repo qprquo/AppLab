@@ -82,7 +82,7 @@
       position: absolute;
       z-index: -1;
       top: 40px;
-      bottom: 40px;
+      height: 100%;
       width: auto;
     }
 
@@ -98,6 +98,17 @@
       left: 32%;
       top: 10%;
       max-width: 120%;
+    }
+  }
+
+
+  &--slider {
+    #{$parent}__image {
+      position: absolute;
+      top: 75px;
+      right: 0;
+      height: 80%;
+      
     }
   }
 

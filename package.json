@@ -28,6 +28,7 @@
     "pug": "^2.0.4",
     "pug-loader": "^2.4.0",
     "sass-loader": "^7.3.1",
+    "slick-carousel": "^1.8.1",
     "svg-sprite-loader": "^4.2.0",
     "terser-webpack-plugin": "^1.4.3",
     "webpack": "^4.41.5",

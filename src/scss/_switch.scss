@@ -1,0 +1,50 @@
+.switch {
+  $parent: &;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  &__header-inner {
+    position: relative;
+    border-radius: 100px;
+    padding: 5px;
+    border: 1px solid #ebebeb;
+  }
+
+  &__slider {
+    position: absolute;
+    z-index: -1;
+    border-radius: 100px;
+    height: 65px;
+    background-color: $primary;
+    transition: left 0.2s ease-in;
+  }
+
+  &__button {
+    $bg: transparent;
+    $color: #929396;
+    background-color: $bg;
+    color: $color;
+    &--active {
+      color: $white !important;
+    }
+    &:hover {
+      background-color: $bg;
+      color: $color;
+    }
+  }
+
+  &__content {
+    padding-left: $grid-gutter-width / 2;
+    padding-right: $grid-gutter-width / 2;
+    &--rotate {
+      .planning-card__inner {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}
