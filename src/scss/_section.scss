@@ -13,12 +13,8 @@
   &--trusted {
   }
 
-  &--pt-0 {
-    padding-top: 0;
-  }
-
-  &--pb-0 {
-    padding-bottom: 0;
+  &--border-bottom {
+    border-bottom: 2px solid $border-color;
   }
 
   &--features {
@@ -101,14 +97,22 @@
     }
   }
 
-
   &--slider {
     #{$parent}__image {
       position: absolute;
       top: 75px;
       right: 0;
       height: 80%;
-      
+    }
+  }
+
+  &--downloads {
+    #{$parent}__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: auto;
     }
   }
 
@@ -119,8 +123,8 @@
   }
 
   @include media-breakpoint-down(lg) {
-    padding-top: 114px / 2;
-    padding-bottom: 114px / 2;
+    padding-top: $section-padding-y / 4;
+    padding-bottom: $section-padding-y / 4;
   }
 
   &--no-padding {

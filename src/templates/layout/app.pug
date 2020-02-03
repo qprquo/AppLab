@@ -12,7 +12,8 @@ html(lang="en")
     title #{htmlWebpackPlugin.options.global.title}
     block head
   body
-    include ../partial/header
-    main.content-wrapper
-      block content
+    .content-wrapper
+      include ../partial/header
+      main.main
+        block content
     block scripts

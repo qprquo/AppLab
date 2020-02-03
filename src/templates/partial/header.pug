@@ -1,10 +1,10 @@
 mixin item(title, url)
-  div( class='menu__item' + (active == title ? ' menu__item--active' : '') )
+  li( class='menu__item' + (active == title ? ' menu__item--active' : '') )
     a(href=url) #{title}    
 
 header.header
   .container
-    a.header__logo(href="#") App
+    a.header__logo.logo(href="#") App
       span Lab
     .header__inner
       ul.header__menu.menu

@@ -1,78 +1,81 @@
+#particle1 {
+  position: absolute;
+  top: 15px;
+  left: 51%;
+}
+
+#particle2 {
+  position: absolute;
+  top: 45px;
+  right: 5%;
+}
+
 .footer {
-  padding-top: 240px;
+  position: relative;
+  background-color: $accent;
+  color: $white;
 
   &__title {
     font-weight: 600;
     margin-bottom: 40px;
-    // color: $primary-darken;
     @include media-breakpoint-down(sm) {
       margin-bottom: 10px;
     }
   }
 
   &__logo {
-    display: inline-block;
-    color: $white;
-    margin-bottom: 40px;
-    img {
-      height: 20px;
-      width: auto;
+    margin-bottom: 54px;
+    span {
+      color: $white;
+    }
+
+    &:hover {
+      span {
+        color: $white;
+      }
     }
   }
 
-  &__col {
-    @include media-breakpoint-down(sm) {
-      margin-bottom: 30px;
+  &__menu {
+    margin-bottom: 50px;
+    .menu__item {
+      &:not(:last-of-type) {
+        margin-right: 40px;
+      }
     }
-  }
-
-  &__item {
-    font-size: 16px;
-    margin-bottom: 10px;
   }
 
   &__copyright {
-    // color: rgba($primary-darken, 0.6);
-    margin-bottom: 20px;
-    margin-right: 50px;
-    font-size: 16px;
-  }
-
-  hr {
-    margin-top: 65px;
-    margin-bottom: 65px;
-    @include media-breakpoint-down(sm) {
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
+    color: #5f636e;
   }
 
   &__bottom {
     margin-bottom: 65px;
   }
 
-  /* &__social {
-    position: relative;
+  &__social {
+    display: flex;
+    margin-bottom: 80px;
+  }
+
+  &__social-link {
+    color: rgba($white, 0.1);
+    display: inline-block;
     width: 36px;
     height: 36px;
-    line-height: 36px;
-    text-align: center;
-    display: inline-block;
-    border-radius: 50%;
-    background-color: $social-bg;
-    margin-right: 15px;
-
-    .sprite {
-      position: absolute;
-      top: calc(50% - 16px /2);
-      left: calc(50% - 16px /2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      width: 32px;
+      height: 32px;
     }
-    &:hover {
-      background-color: darken($social-bg, 10%);
+    &::hover {
+      color: $white;
     }
-  } */
 
-  @include media-breakpoint-down(sm) {
-    padding-top: 20px;
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    }
   }
 }

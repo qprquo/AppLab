@@ -4,7 +4,7 @@ block variables
   - var active = "Home"
 
 block content
-  .hero
+  section.hero
     .container.container--offset 
       .row
         .col-7.hero__content
@@ -38,7 +38,7 @@ block content
           .features
             each item, index in htmlWebpackPlugin.options.global.features
               +feature(item)
-  section.section.section--jackpots
+  section.section.section--jackpots.pb-0
     .container.container--offset
       .row.section__heading-container
         .col.section__heading-spacer.section__heading-spacer--right
@@ -54,7 +54,7 @@ block content
         each item in htmlWebpackPlugin.options.global.jackpots
           .col-4
             +feature(item)
-  section.section.section--designed.section--no-padding
+  section.section.section--designed.section--border-bottom
     .container
       .row
         .col
@@ -178,7 +178,7 @@ block content
                       button.button.button--lg Subscribe now
                     .planning-card__footer
                       a.link(href="#") Or Start 14 days trial
-  section.section.section--slider.position-relative
+  section.section.section--slider.section--border-bottom.position-relative
     .container
       .row
         .col-6
@@ -191,60 +191,34 @@ block content
             The rise of mobile devices transforms the way we consume.
             elevant channels such as Facebook.
           .testimonial-slider
-            .testimonial-slider__item
-              .testimonial-slider__rating
-                svg(width="20" height="20")
-                  use(xlink:href="#star")
-                svg(width="20" height="20")
-                  use(xlink:href="#star")
-                svg(width="20" height="20")
-                  use(xlink:href="#star")
-                svg(width="20" height="20")
-                  use(xlink:href="#star")
-                svg(width="20" height="20")
-                  use(xlink:href="#star")
-              h5.testimonial-slider__title.
-                User friendly & Customizable
-              p.testimonial-slider__feedback.
-                Bring to the table win-win survival strategies to ensure proactive 
-                domination. At the end of the day, going forward, a new normal
-                that has evolved from generation X is on the runway heading towards
-                a streamlined cloud solution. User generated content in real-time will
-                have multiple touchpoints for offshoring.
-              .testimonial-slider__profile
-                img.testimonial-slider__profile-image(src="images/adult-beard-boy-220453.png")
-                .testimonial-slider__profile-name.
-                  Zoltan Nemeth
-                .testimonial-slider__role.
-                  CEO of Pixler Lab
-            .testimonial-slider__item
-              .testimonial-slider__rating
-                svg(width="20" height="20")
-                  use(xlink:href="#star")
-                svg(width="20" height="20")
-                  use(xlink:href="#star")
-                svg(width="20" height="20")
-                  use(xlink:href="#star")
-                svg(width="20" height="20")
-                  use(xlink:href="#star")
-                svg(width="20" height="20")
-                  use(xlink:href="#star")
-              h5.testimonial-slider__title.
-                User friendly & Customizable
-              p.testimonial-slider__feedback.
-                Bring to the table win-win survival strategies to ensure proactive 
-                domination. At the end of the day, going forward, a new normal
-                that has evolved from generation X is on the runway heading towards
-                a streamlined cloud solution. User generated content in real-time will
-                have multiple touchpoints for offshoring.
-              .testimonial-slider__profile
-                img.testimonial-slider__profile-image(src="images/adult-beard-boy-220453.png")
-                .testimonial-slider__profile-name.
-                  Zoltan Nemeth
-                .testimonial-slider__role.
-                  CEO of Pixler Lab
-                
+            each item in htmlWebpackPlugin.options.global.testimonials
+              .testimonial-slider__item
+                +testimonial(item)
 
-
-
-
+  section.section.section--faq.section--border-bottom
+    .container
+      h3.section__heading.heading.headin--faq.text-center.
+        Frequently answered questions
+      p.section__subheading.text-center.
+        The rise of mobile devices transforms the way we consume information entirely <br>
+        and the world's most elevant channels such as Facebook.
+      #faqAccordion.accordion
+        each item in htmlWebpackPlugin.options.global.faqs
+          .accordion__item
+            +faq(item)
+  section.section.section--downloads.py-0
+    .container
+      .row
+        .col-7.section
+          h3.section__heading.heading.heading--downloads Download our App now !
+          p.section__subheading.
+            The rise of mobile devices transforms the way we consume information entirely
+            and the world's most elevant channels such as Facebook.
+          .section__downloads
+            a.link.link--download(href="#")
+              img(src="images/google-play.png" alt="Google play")
+            a.link.link--download(href="#")
+              img(src="images/app-store.png" alt="App store")
+        .col
+          img.section__image(src="images/download.svg")
+  include ../partial/footer

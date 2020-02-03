@@ -1,5 +1,5 @@
 mixin banner(item)
-  li(class!=attributes.class + ' banners__item')
+  div(class!=attributes.class + ' banners__item')
     img(src=item.src)
 
 mixin feature(item)
@@ -8,3 +8,31 @@ mixin feature(item)
     .feature__content
       h4.feature__title #{item.title}
       p.feature__description #{item.description}
+
+mixin rating(amount)
+  .testimonial-slider__rating
+    - for(let i = 0 ; i < 5; i++)
+      svg(width="20" height="20")
+        if i + 1 <= amount
+          use(xlink:href="#star")
+        else 
+          use(xlink:href="#star-outline")
+
+mixin testimonial(item)
+  +rating(item.rating)
+  h5.testimonial-slider__title #{item.title}
+  p.testimonial-slider__feedback #{item.feedback}
+  .testimonial-slider__profile
+    img.testimonial-slider__profile-image(src=item.sender.avatar)
+    .testimonial-slider__profile-name #{item.sender.name}
+    .testimonial-slider__role #{item.sender.role}
+
+mixin faq(item)
+  - let id = "collapse" + item.id
+  .accordion__item
+    .accordion__header(data-toggle="collapse" data-target="#" + id,  aria-expanded="false" aria-controls="#" + id)
+      | #{item.question}
+      .accordion__icon
+    .accordion__body.collapse(id=id, data-parent="#faqAccordion")
+      .accordion__inner #{item.answer}
+

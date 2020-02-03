@@ -107,6 +107,9 @@ a {
   &--jackpots {
     margin-bottom: 0;
   }
+  &--downloads {
+    font-size: 48px;
+  }
 }
 
 .to-top {
@@ -149,5 +152,23 @@ a {
   color: $primary;
   &:hover {
     color: darken($primary, 10%);
+  }
+  &--download {
+    display: inline-block;
+    &:not(:last-of-type) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  &,
+  &:hover {
+    color: $secondary;
+    span {
+      color: $accent;
+    }
   }
 }

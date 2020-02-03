@@ -1,0 +1,58 @@
+.accordion {
+  $parent: &;
+
+  &__item {
+    background-color: #f5f7fa;
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+  }
+  &__inner {
+    padding: 0 50px 50px 50px;
+  }
+
+  &__header {
+    position: relative;
+    font-size: 20px;
+    padding: 25px 70px 25px 50px;
+    color: $accent;
+    font-weight: 600;
+    cursor: pointer;
+
+    &[aria-expanded="true"] {
+      #{$parent}__icon::before {
+        top: 50%;
+        bottom: 50%;
+      }
+    }
+  }
+
+  &__body {
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 40px;
+    top: calc(50% - 18px / 2);
+    &::before {
+      content: "";
+      transition: top 0.35s ease, bottom 0.35s ease;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: calc(50% - 1px);
+      width: 2px;
+      background-color: $accent;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% - 1px);
+      width: 100%;
+      height: 2px;
+      background-color: $accent;
+    }
+  }
+}

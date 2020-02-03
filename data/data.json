@@ -142,5 +142,64 @@
       "class": "feature--column",
       "icon": "icon--gray icon--customer-service"
     }
+  ],
+  "testimonials": [
+    {
+      "title": "User friendly & Customizable",
+      "feedback": "Bring to the table win-win survival strategies to ensure proactive that has evolved from generation X is on the runway heading towards domination. At the end of the day, going forward, a new normal a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.",
+      "sender": {
+        "name": "Zoltan Nemeth",
+        "role": "CEO of Pixler Lab",
+        "avatar": "images/adult-beard-boy-220453.png"
+      },
+      "rating": 5
+    },
+    {
+      "title": "Good support",
+      "feedback": "Bring to the table win-win survival strategies to ensure proactive that has evolved from generation X is on the runway heading towards domination. At the end of the day, going forward, a new normal a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.",
+      "sender": {
+        "name": "John Doe",
+        "role": "CEO of Acme",
+        "avatar": "images/john-doe.png"
+      },
+      "rating": 4
+    },
+    {
+      "title": "Cool features",
+      "feedback": "Bring to the table win-win survival strategies to ensure proactive that has evolved from generation X is on the runway heading towards domination. At the end of the day, going forward, a new normal a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.",
+      "sender": {
+        "name": "Lois Lane",
+        "role": "Editor-in-chief of Daily Planet",
+        "avatar": "images/lois-lane.png"
+      },
+      "rating": 5
+    }
+  ],
+  "faqs": [
+    {
+      "id": 1,
+      "question": "How to contact with riders emergency?",
+      "answer": "Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring."
+    },
+    {
+      "id": 2,
+      "question": "App installation failed, how to update system information?",
+      "answer": "Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring."
+    },
+    {
+      "id": 3,
+      "question": "Website reponse taking time, how to improve?",
+      "answer": "Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring."
+    },
+    {
+      "id": 4,
+      "question": "New update fixed all bug and issues",
+      "answer": "Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring."
+    },
+    {
+      "id": 5,
+      "question": "How to contact with riders emergency?",
+      "answer": "Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring."
+    }
   ]
 }
