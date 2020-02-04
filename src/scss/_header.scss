@@ -32,6 +32,9 @@
   &__inner {
     margin-left: auto;
     display: flex;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
 
   &__logo {
@@ -54,10 +57,6 @@
       & > a {
         padding: 0 20px;
       }
-    }
-
-    @include media-breakpoint-down(sm) {
-      display: none;
     }
   }
 
@@ -92,12 +91,10 @@
   }
 
   @include media-breakpoint-down(sm) {
-    // height: 64px;
-    background-color: $white;
   }
 
   @include media-breakpoint-down(lg) {
-    padding: 40px 0;
+    padding: 20px 0;
   }
 }
 

@@ -33,6 +33,15 @@
       margin-right: 0;
       margin-bottom: 30px;
     }
+
+    @include media-breakpoint-down(sm) {
+      padding-right: 0;
+      align-items: center;
+      #{$parent}__title,
+      #{$parent}__description {
+        text-align: center;
+      }
+    }
   }
 
   &--center {
@@ -41,7 +50,6 @@
     #{$parent}__description {
       text-align: center;
     }
-    
   }
 
   &--red {

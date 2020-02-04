@@ -46,7 +46,7 @@
   }
 
   &__copyright {
-    color: #5f636e;
+    color: rgba($white, 0.3);
   }
 
   &__bottom {
@@ -59,7 +59,7 @@
   }
 
   &__social-link {
-    color: rgba($white, 0.1);
+    color: rgba($white, 0.2);
     display: inline-block;
     width: 36px;
     height: 36px;

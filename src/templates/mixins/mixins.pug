@@ -3,7 +3,7 @@ mixin banner(item)
     img(src=item.src)
 
 mixin feature(item)
-  div(class!='feature ' + item.class)
+  div(class!='feature ' + item.class + (attributes.class ? ' ' + attributes.class : ''))
     div(class="feature__icon icon " + item.icon)
     .feature__content
       h4.feature__title #{item.title}

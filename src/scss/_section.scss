@@ -19,18 +19,29 @@
 
   &--features {
     padding-top: 150px;
+    #{$parent}__image-container {
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 30px;
+      }
+    }
     #{$parent}__image--ellipse {
       position: absolute;
       // top: calc(50% - 587px / 2);
       left: -$container-offset-padding-x / 2;
       width: 100%;
+
+      @include media-breakpoint-down(sm) {
+        left: auto;
+      }
     }
     #{$parent}__image--phone {
-      @extend %phone-mockup;
       width: 65%;
       height: auto;
       transform-origin: center;
-      transform: rotate(-15deg) translateX(10%);
+      transform: rotate(-15deg) translateX(-12%) translateY(-5%);
+      @include media-breakpoint-down(sm) {
+        transform: rotate(-15deg);
+      }
     }
   }
 
@@ -44,6 +55,12 @@
         bottom: 0;
         width: 1px;
         background-color: #b9b9b8;
+        @include media-breakpoint-down(sm) {
+          content: none;
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 30px;
       }
     }
 
@@ -55,10 +72,18 @@
       &--right {
         padding-right: 48px;
       }
+
+      @include media-breakpoint-down(sm) {
+        padding-left: $grid-gutter-width / 2;
+        padding-right: $grid-gutter-width / 2;
+      }
     }
 
     #{$parent}__heading-container {
       margin-bottom: 110px;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 55px;
+      }
     }
   }
 
@@ -68,7 +93,20 @@
       right: 0;
       height: 100%;
       width: auto;
+      @include media-breakpoint-down(sm) {
+        position: static;
+        width: 100%;
+        height: auto;
+      }
     }
+
+    .container--offset {
+      @include media-breakpoint-down(sm) {
+        padding-bottom: 0;
+      }
+    }
+
+
     #{$parent}__content {
     }
   }
@@ -80,12 +118,19 @@
       top: 40px;
       height: 100%;
       width: auto;
+
+      @include media-breakpoint-down(sm) {
+        left: 0;
+      }
     }
 
     #{$parent}__image--phone-first {
-      @extend %phone-mockup;
-      transform: rotate(-15deg) translateY(10%);
-      width: 80%;
+      transform: rotate(-15deg) translateX(-5%) translateY(-5%);
+      width: 90%;
+      @include media-breakpoint-down(sm) {
+        width: 70%;
+        transform: rotate(-15deg) translateX(-5%) translateY(5%);
+      }
     }
 
     #{$parent}__image--phone-second {
@@ -93,7 +138,18 @@
       position: absolute;
       left: 32%;
       top: 10%;
-      max-width: 120%;
+      width: 120%;
+      @include media-breakpoint-down(sm) {
+        transform: translateX(-5%) translateY(0);
+        width: 80%;
+      }
+    }
+
+    #{$parent}__image-container,
+    #{$parent}__container {
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 30px;
+      }
     }
   }
 

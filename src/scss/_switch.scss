@@ -36,6 +36,10 @@
       background-color: $bg;
       color: $color;
     }
+    @include media-breakpoint-down(sm) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
   }
 
   &__content {

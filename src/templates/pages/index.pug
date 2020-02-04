@@ -7,41 +7,47 @@ block content
   section.hero
     .container.container--offset 
       .row
-        .col-7.hero__content
+        .col-sm-7.hero__content
           .hero__award
             .hero__award-icon
               svg(width="18" height="18")
                 use(xlink:href="#award")
-            | #1 Editiors Choice App of 2020
+            .hero__award-inner #1 Editiors Choice App of 2020
           h1.hero__title Best app for your modern lifestyle
           p.hero__subtitle Increase productivity with a simple to-do app. app for managing your personal budgets.
           .hero__buttons
             a(href="#" class="button") Try it for Free
             a(href="#" class="button button--link") Watch demo video
-        .col
-          img(src="images/screen-1.svg" class="hero__phone" alt="App")
+        .col.hero__phone-container 
+          img(src="images/screen-1.svg" class="hero__phone" alt="App") 
+
   section.section.section--trusted.pb-0
     .container.container--offset
       h2.section__heading.heading.heading--trusted Trusted by companies like
-      .banners.banners--trusted.row
+      .banners.banners--trusted.row.banners-slider
         each item in htmlWebpackPlugin.options.global.banners
           +banner(item)(class="col-2")
+
   section.section.section--features.pb-0
     .container.container--offset
       .row
-        .col.d-flex.flex-column.justify-content-center
+        .col-md-6.d-flex.flex-column.justify-content-center.align-items-center.section__image-container
           img(src="images/ellipse-1.png" class="section__image section__image--ellipse" alt="ellipse")
-          img(src="images/screen-2.svg" class="section__image section__image--phone" alt="features")
+          img(src="images/phone-2.svg" class="section__image section__image--phone" alt="features")
         .col
           h2.section__heading.heading.heading--features Awesome app <br> features
           p.section__subheading Increase productivity with a simple to-do app. app for managing your personal budgets.
           .features
             each item, index in htmlWebpackPlugin.options.global.features
-              +feature(item)
+              if index == htmlWebpackPlugin.options.global.features.length - 1
+                +feature(item)(class="mb-0")
+              else
+                +feature(item)
+
   section.section.section--jackpots.pb-0
     .container.container--offset
       .row.section__heading-container
-        .col.section__heading-spacer.section__heading-spacer--right
+        .col-md-6.section__heading-spacer.section__heading-spacer--right
           h2.section__heading.heading.heading--jackpots.
             Smart jackpots that you may love this 
             anytime & anywhere
@@ -51,13 +57,17 @@ block content
             consume information entirely and the world's most
             elevant channels such as Facebook.
       .row.justify-content-between
-        each item in htmlWebpackPlugin.options.global.jackpots
-          .col-4
-            +feature(item)
+        each item, index in htmlWebpackPlugin.options.global.jackpots
+          .col-md-4.col-sm-6
+            if index == htmlWebpackPlugin.options.global.jackpots.length - 1
+              +feature(item)(class="mb-0")
+            else
+              +feature(item)
+
   section.section.section--designed.section--border-bottom
     .container
       .row
-        .col
+        .col-md-6
           img(src="images/designed-01.svg" class="section__image" )
         .col.section.container.container--offset
           h3.section__heading.heading.
@@ -68,7 +78,8 @@ block content
             The rise of mobile devices transforms the way we
             consume information entirely and the world's most
             elevant channels such as Facebook.
-          a(href="#" class="button button--lg") Learn More
+          a(href="#" class="button button--lg button--responsive") Learn More
+
   section.section.section--why-choose.pb-0
     .container.container--offset
       h3.section__heading.heading.heading--why-choose.text-center Why you should choose our app
@@ -77,25 +88,27 @@ block content
         and the world's most elevant channels such as Facebook.
       .row
         each item in htmlWebpackPlugin.options.global.pros
-          .col-4
+          .col-sm-6.col-md-4
             +feature(item)
+
   section.section.section--what-we-built.pb-0
     .container.container--offset
       .row
-        .col-8
+        .col-md-8.section__container
           h3.section__heading.heading.heading--what-we-built Ultimate features <br> that we built
           p.section__subheading.
             The rise of mobile devices transforms the way we <br>
             consume information entirely.
           .row
             each item in htmlWebpackPlugin.options.global.built
-              .col-6
+              .col-sm-6
                 +feature(item)
-          a(href="#" class="button button--lg") See all
-        .col.d-flex.flex-column.justify-content-center
+          a(href="#" class="button button--lg button--responsive") See all
+        .col.d-flex.flex-column.justify-content-center.section__image-container
           img(src="images/elipses-2.png" class="section__image section__image--ellipse" alt="ellipse")
           img(src="images/phone-3.svg" class="section__image section__image--phone-first" alt="ellipse")
           img(src="images/phone-4.png" class="section__image section__image--phone-second" alt="ellipse")
+
   section.section.section--planning.pb-0
     .container
       h3.section__heading.heading.heading--planning.text-center.
@@ -112,7 +125,7 @@ block content
             button.switch__button.button(type="button") Annually
         .switch__content
           .row.justify-content-center
-            .col-5
+            .col-sm-6.col-md-5
               .planning-card
                 .planning-card__inner
                   .planning-card__front
@@ -128,7 +141,7 @@ block content
                         li.list__item 1,000's of Templates
                         li.list__item Blog Support Tools
                         li.list__item eCommerce Store
-                      button.button.button--lg Start free trial
+                      button.button.button--lg.button--responsive Start free trial
                   .planning-card__back
                     .planning-card__header
                       .planning-card__pricing
@@ -142,8 +155,8 @@ block content
                         li.list__item 1,000's of Templates
                         li.list__item Blog Support Tools
                         li.list__item eCommerce Store
-                      button.button.button--lg Start free trial
-            .col-5
+                      button.button.button--lg.button--responsive Start free trial
+            .col-sm-6.col-md-5
               .planning-card.planning-card--recommended
                 .planning-card__inner
                   .planning-card__front
@@ -159,7 +172,7 @@ block content
                         li.list__item 1,000's of Templates
                         li.list__item Blog Support Tools
                         li.list__item eCommerce Store
-                      button.button.button--lg Subscribe now
+                      button.button.button--lg.button--responsive Subscribe now
                     .planning-card__footer
                       a.link(href="#") Or Start 14 days trial
                   .planning-card__back
@@ -175,15 +188,16 @@ block content
                         li.list__item 1,000's of Templates
                         li.list__item Blog Support Tools
                         li.list__item eCommerce Store
-                      button.button.button--lg Subscribe now
+                      button.button.button--lg.button--responsive Subscribe now
                     .planning-card__footer
                       a.link(href="#") Or Start 14 days trial
+
   section.section.section--slider.section--border-bottom.position-relative
     .container
       .row
-        .col-6
+        .col-md-6
           img.section__image(src="images/map.png")
-        .col-6
+        .col
           h3.section__heading.heading.heading--slider.
             Meet Client Satisfaction <br>
             by using product
@@ -206,6 +220,7 @@ block content
         each item in htmlWebpackPlugin.options.global.faqs
           .accordion__item
             +faq(item)
+
   section.section.section--downloads.py-0
     .container
       .row
@@ -221,4 +236,5 @@ block content
               img(src="images/app-store.png" alt="App store")
         .col
           img.section__image(src="images/download.svg")
+
   include ../partial/footer

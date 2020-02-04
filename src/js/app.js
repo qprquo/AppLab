@@ -34,7 +34,20 @@ $(() => {
     slidesToShow: 1,
     slidesToScroll: 1,
   });
- 
+
+  $('.banners-slider').slick({
+    mobileFirst: true,
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    responsive: [{
+      breakpoint: 576,
+      settings: "unslick"
+    }]
+  });
+
 
 
 });

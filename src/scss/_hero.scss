@@ -13,6 +13,9 @@
   &__title {
     font-size: 60px;
     margin-bottom: 25px;
+    @include media-breakpoint-down(md) {
+      font-size: 40px;
+    }
   }
 
   &__subtitle {
@@ -36,6 +39,8 @@
   }
 
   &__award {
+    overflow: hidden;
+    max-width: 100%;
     line-height: 1;
     background-color: #e2eaed;
     display: inline-block;
@@ -43,6 +48,10 @@
     border-radius: 17px;
     position: relative;
     margin-bottom: 30px;
+  }
+
+  &__award-inner {
+    white-space: nowrap;
   }
 
   &__award-icon {
@@ -60,14 +69,32 @@
     justify-content: center;
   }
 
-  &__phone {
-    @extend %phone-mockup;
-    width: 90%;
-    height: auto;
-    margin-top: -40px;
-    @include media-breakpoint-down(lg) {
-      margin-top: 0;
+  &__buttons {
+    .button {
+      @include media-breakpoint-down(sm) {
+        text-align: center;
+        display: block;
+        margin-bottom: 15px;
+      }
     }
+  }
+
+  &__phone {
+    height: auto;
+    width: 90%;
+    margin-top: 0;
+    @include media-breakpoint-up(sm) {
+      margin-top: -40px;
+    }
+  }
+
+  &__phone-container {
+    @include media-breakpoint-down(sm) {
+      align-items: flex-start;
+      display: flex;
+      justify-content: center;
+    }
+
   }
 
   &__content {
@@ -75,10 +102,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    @include media-breakpoint-down(sm) {
+      align-items: stretch;
+    }
   }
 
   @include media-breakpoint-down(lg) {
-    padding-top: 140px;
-    // height: $hero-height-lg;
+    padding-top: 100px;
   }
 }

@@ -23,4 +23,14 @@
       background-color: transparent;
     }
   }
+
+  &--responsive {
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+      display: block;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
 }

@@ -95,6 +95,14 @@
     color: $muted;
   }
 
+  &__header,
+  &__body,
+  &__footer {
+    @include media-breakpoint-down(sm) {
+      padding: 30px 15px;
+    }
+  }
+
   &--recommended {
     #{$parent}__inner {
       border-color: #ebebeb;
@@ -102,5 +110,9 @@
     #{$parent}__header {
       background: linear-gradient(to top, #f4f7f9, rgba(#f4f7f9, 0.1) 100%);
     }
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 30px;
   }
 }
