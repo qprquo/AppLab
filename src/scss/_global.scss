@@ -110,6 +110,10 @@ a {
   &--downloads {
     font-size: 48px;
   }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 30px;
+  }
 }
 
 .to-top {
@@ -156,6 +160,7 @@ a {
   &--download {
     display: inline-block;
     &:not(:last-of-type) {
+      margin-bottom: 15px;
       margin-right: 30px;
     }
   }

@@ -30,8 +30,8 @@ mixin testimonial(item)
 mixin faq(item)
   - let id = "collapse" + item.id
   .accordion__item
-    .accordion__header(data-toggle="collapse" data-target="#" + id,  aria-expanded="false" aria-controls="#" + id)
-      | #{item.question}
+    .accordion__header.collapsed(data-toggle="collapse" data-target="#" + id,  aria-expanded="false" aria-controls="#" + id)
+      .accordion__title #{item.question}
       .accordion__icon
     .accordion__body.collapse(id=id, data-parent="#faqAccordion")
       .accordion__inner #{item.answer}
