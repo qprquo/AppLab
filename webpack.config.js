@@ -1,4 +1,4 @@
-const Path = require('path');
+const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -8,7 +8,6 @@ const data = require('./data/data');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
 const SpritesmithPlugin = require('webpack-spritesmith');
 const SvgSpriteLoaderPlugin = require('svg-sprite-loader/plugin');
-const path = require('path');
 const glob = require('glob').sync;
 
 
@@ -27,7 +26,7 @@ module.exports = (env, argv) => {
     },
     output: {
       filename: 'js/[name].js',
-      path: Path.resolve(__dirname, 'dist')
+      path: path.resolve(__dirname, 'dist')
     },
     devtool: argv.mode !== 'production' ? 'source-map' : false,
     optimization: {
@@ -92,7 +91,7 @@ module.exports = (env, argv) => {
       port: 80,
       compress: true,
       hot: true,
-      contentBase: Path.join(__dirname, 'src'),
+      contentBase: path.join(__dirname, 'src'),
       watchContentBase: true,
       disableHostCheck: true
     },
@@ -124,7 +123,7 @@ module.exports = (env, argv) => {
         },
         {
           test: /\.s?css$/,
-          exclude: [Path.resolve("/node_modules/")],
+          exclude: [path.resolve("/node_modules/")],
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
@@ -150,7 +149,7 @@ module.exports = (env, argv) => {
               loader: "sass-loader",
               options: {
                 sourceMap: true,
-                includePaths: [Path.resolve('src/scss')],
+                includePaths: [path.resolve('src/scss')],
               }
             }
           ]
