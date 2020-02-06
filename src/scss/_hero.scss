@@ -39,7 +39,6 @@
   }
 
   &__award {
-    overflow: hidden;
     max-width: 100%;
     line-height: 1;
     background-color: #e2eaed;
@@ -51,6 +50,7 @@
   }
 
   &__award-inner {
+    overflow-x: auto;
     white-space: nowrap;
   }
 
@@ -82,9 +82,9 @@
   &__phone {
     height: auto;
     width: 90%;
-    margin-top: 0;
-    @include media-breakpoint-up(sm) {
-      margin-top: -40px;
+    margin-top: -40px;
+    @include media-breakpoint-down(sm) {
+      margin-top: 0;
     }
   }
 

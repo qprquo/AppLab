@@ -36,3 +36,6 @@ mixin faq(item)
     .accordion__body.collapse(id=id, data-parent="#faqAccordion")
       .accordion__inner #{item.answer}
 
+mixin menuItem(title, url)
+  li( class='menu__item' + (active == title ? ' menu__item--active' : '') )
+    a(href=url) #{title}    

@@ -1,14 +1,13 @@
-mixin item(title, url)
-  li( class='menu__item' + (active == title ? ' menu__item--active' : '') )
-    a(href=url) #{title}    
-
 header.header
   .container
     a.header__logo.logo(href="#") App
       span Lab
+    button.header__menu-toggle.toggle
+      .toggle__inner
+
     .header__inner
       ul.header__menu.menu
         each navItem in htmlWebpackPlugin.options.global.navMenu
-          +item(navItem.title, navItem.link)
+          +menuItem(navItem.title, navItem.link)
       .header__buttons
-        button(class="button", type="button") Try for free
+        button(class="button" type="button") Try for free

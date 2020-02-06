@@ -9,12 +9,19 @@ $(() => {
   const body = $('body');
   const menuToggle = $('.header__menu-toggle');
   menuToggle.click((e) => {
-    body.addClass('mobile-menu-is-shown');
+    e.stopPropagation();
+    body.toggleClass('mobile-menu-is-shown');
   })
-  const closeMenu = $('.header__close');
-  closeMenu.click((e) => {
+
+  $('.mobile-menu').click((e) => {
+    e.stopPropagation();
+  })
+
+  $(document).on('click', (e) => {
+    console.log('document click');
     body.removeClass('mobile-menu-is-shown');
-  });
+  })
+
   const handleToTop = () => {
     const offset = 100;
     if (document.body.scrollTop > offset || document.documentElement.scrollTop > offset) {
@@ -25,6 +32,7 @@ $(() => {
   }
   handleToTop();
   $(window).scroll(handleToTop);
+
   $('.button--to-top').click((e) => {
     $('html,body').animate({ scrollTop: 0 }, 'slow');
   })

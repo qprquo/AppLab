@@ -25,7 +25,6 @@ $h4-font-size: 0.875rem;
 
 $headings-font-weight: 600;
 $headings-line-height: 1.4;
-// $headings-font-family: "Playfair Display", serif;
 $headings-color: $accent;
 
 $orange: #fc6a42;
@@ -49,8 +48,21 @@ $hero-height-lg: 800px;
 $header-padding-top: 90px;
 $header-padding-bottom: 90px;
 $header-height: $header-padding-top + 56px + $header-padding-bottom;
+$header-box-shadow: 0 0 20px rgba($black,.1);
 
 $section-padding-y: 232px;
 $container-offset-padding-x: 120px;
 
-$phone-box-shadow: 4px 4px 20px 5px rgba($black, 0.1) 
+// toggle
+$toggle-height: 20px;
+$toggle-width: 30px;
+$toggle-padding: 3px;
+$toggle-inner-height: 2px;
+$toggle-bg: transparent;
+$toggle-color: $accent;
+
+// mobile menu
+$mobile-menu-width: 265px;
+
+// transition
+$content-transition: 0.3s transform ease;

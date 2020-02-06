@@ -1,0 +1,6 @@
+.mobile-menu
+  ul.mobile-menu__menu.menu
+    -var nav = htmlWebpackPlugin.options.global.navMenu;
+    each navItem in nav
+      +menuItem(navItem.title, navItem.link)
+  button.button.mobile-menu__try-btn Try for free

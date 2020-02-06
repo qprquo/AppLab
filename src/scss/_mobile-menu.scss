@@ -1,0 +1,25 @@
+.mobile-menu {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: $mobile-menu-width;
+  border-left: 1px solid $border-color;
+  height: 100%;
+  padding: 20px 30px;
+  overflow-y: auto;
+  transform: translateX($mobile-menu-width);
+  transition: $content-transition;
+  &__menu {
+    flex-direction: column;
+    font-weight: 500;
+    margin-bottom: 30px;
+    .menu__item {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__try-btn {
+    width: 100%;
+  }
+}
