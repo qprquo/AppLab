@@ -1,8 +1,9 @@
 .toggle {
+  $parent: &;
   position: relative;
   border: none;
   display: inline-block;
-  background-color:  $toggle-bg;
+  background-color: $toggle-bg;
   padding: $toggle-padding;
   width: $toggle-width;
   height: $toggle-height;
@@ -45,10 +46,24 @@
     content: "";
     bottom: $toggle-padding;
   }
+
+  &--cross {
+    &::before {
+      transform: translateY($toggle-dy) rotate(-45deg);
+    }
+
+    #{$parent}__inner {
+      display: none;
+    }
+
+    &::after {
+      transform: translateY(-$toggle-dy) rotate(45deg);
+    }
+  }
 }
 
 .mobile-menu-is-shown {
-  .toggle__inner {
+  /* .toggle__inner {
     opacity: 0;
     transform: translateX(-100%);
   }
@@ -61,5 +76,5 @@
 
   .toggle::after {
     transform: translateY(-$dy) rotate(45deg);
-  }
+  } */
 }

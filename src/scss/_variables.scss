@@ -15,7 +15,7 @@ $grid-breakpoints: (
 
 $black: #000;
 $primary: #2500f9;
-$accent: #242f51; 
+$accent: #242f51;
 $secondary: #feaa25;
 $white: #fff;
 $h1-font-size: 3.75rem;
@@ -38,7 +38,7 @@ $header-color: #e1e1e1;
 $muted: #b1b1b3;
 $body-color: #616368;
 $border-color: #f4f4f4;
-$yellow-light: #fcec64; 
+$yellow-light: #fcec64;
 
 $font-family-base: "Poppins", sans-serif;
 
@@ -48,8 +48,9 @@ $hero-height-lg: 800px;
 $header-padding-top: 90px;
 $header-padding-bottom: 90px;
 $header-height: $header-padding-top + 56px + $header-padding-bottom;
-$header-box-shadow: 0 0 20px rgba($black,.1);
+$header-box-shadow: 0 0 20px rgba($black, 0.1);
 
+$box-shadow-to-top: rgba($black, 0.1) 0px 2px 0px 0px, rgba($black, 0.04) 0px 0px 0px 0.5px;
 $section-padding-y: 232px;
 $container-offset-padding-x: 120px;
 
@@ -60,9 +61,10 @@ $toggle-padding: 3px;
 $toggle-inner-height: 2px;
 $toggle-bg: transparent;
 $toggle-color: $accent;
+$toggle-dy: ($toggle-height - $toggle-padding * 2 - $toggle-inner-height) / 2;
 
 // mobile menu
-$mobile-menu-width: 265px;
+$mobile-menu-width: 320px;
 
 // transition
 $content-transition: 0.3s transform ease;

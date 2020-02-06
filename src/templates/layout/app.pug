@@ -7,13 +7,17 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
-    meta(name="description", content="description")
-    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap")
+    meta(name="description" content="description")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap")
     title #{htmlWebpackPlugin.options.global.title}
     block head
   body
     include ../partial/mobile-menu
+    .button.button.button--to-top(type="button")
+      svg(width="12" height="12")
+            use(xlink:href="#chevron-top")
     .content-wrapper
+        
       include ../partial/header
       main.main
         block content

@@ -6,7 +6,7 @@
   width: $mobile-menu-width;
   border-left: 1px solid $border-color;
   height: 100%;
-  padding: 20px 30px;
+  padding: 40px 40px 20px 40px;
   overflow-y: auto;
   transform: translateX($mobile-menu-width);
   transition: $content-transition;
@@ -21,5 +21,11 @@
 
   &__try-btn {
     width: 100%;
+  }
+
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
   }
 }

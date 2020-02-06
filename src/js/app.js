@@ -14,7 +14,10 @@ $(() => {
   })
 
   $('.mobile-menu').click((e) => {
-    e.stopPropagation();
+    if ($(e.target).hasClass('mobile-menu__close')) {
+      return true
+    }
+    return false;
   })
 
   $(document).on('click', (e) => {
@@ -24,7 +27,7 @@ $(() => {
 
   const handleToTop = () => {
     const offset = 100;
-    if (document.body.scrollTop > offset || document.documentElement.scrollTop > offset) {
+    if ($(window).scrollTop() > offset) {
       body.addClass('to-top');
     } else {
       body.removeClass('to-top');

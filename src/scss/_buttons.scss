@@ -1,4 +1,26 @@
+@keyframes bubble {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .button {
+  -webkit-appearance: none;
   font-weight: 700;
   padding: 20px 40px;
   border-radius: 100px;
@@ -24,6 +46,34 @@
     }
   }
 
+  &--to-top {
+    $size: 48px;
+    opacity: 0;
+    visibility: hidden;
+    padding: 0;
+    position: fixed;
+    z-index: 9999;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 50%;
+    color: $white;
+    width: $size;
+    height: $size;
+    background-color: $primary;
+    box-shadow: $box-shadow-to-top;
+    transform: translateY(0);
+    transition: opacity 0.5s ease-in, transform 0.2s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      color: $white;
+      transform: translateY(-2px);
+      background-color: darken($primary, 10%);
+      animation-play-state: paused;
+    }
+  }
+
   &--responsive {
     @include media-breakpoint-down(sm) {
       text-align: center;
@@ -32,5 +82,6 @@
       padding-right: 30px;
     }
   }
-
 }
+
+

@@ -11,6 +11,9 @@
   <body>
     <div class="mobile-menu">
       <ul class="mobile-menu__menu menu">
+        <button class="mobile-menu__close toggle toggle--cross">
+          <div class="toggle__inner"></div>
+        </button>
         <li class="menu__item menu__item--active"><a href="#">Home    </a></li>
         <li class="menu__item"><a href="#">Key Features    </a></li>
         <li class="menu__item"><a href="#">Pricing    </a></li>
@@ -18,6 +21,11 @@
         <li class="menu__item"><a href="#">FAQ    </a></li>
       </ul>
       <button class="button mobile-menu__try-btn">Try for free</button>
+    </div>
+    <div class="button button button--to-top" type="button">
+      <svg width="12" height="12">
+        <use xlink:href="#chevron-top"></use>
+      </svg>
     </div>
     <div class="content-wrapper">
       <header class="header">
@@ -50,7 +58,7 @@
                       <use xlink:href="#award"></use>
                     </svg>
                   </div>
-                  <div class="hero__award-inner">#1 Editiors Choice App of 2020</div>
+                  <div class="hero__award-inner overflow-x-sm">#1 Editiors Choice App of 2020</div>
                 </div>
                 <h1 class="hero__title">Best app for your modern lifestyle</h1>
                 <p class="hero__subtitle">Increase productivity with a simple to-do app. app for managing your personal budgets.</p>

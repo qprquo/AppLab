@@ -129,7 +129,7 @@ a {
   .button--to-top {
     opacity: 1;
     visibility: visible;
-    // display: inline-block;
+    animation: 0.5s bubble linear 2;  
   }
 }
 
@@ -184,6 +184,12 @@ a {
     span {
       color: $accent;
     }
+  }
+}
+
+.overflow-x-sm {
+  @include media-breakpoint-down(sm) {
+    overflow-x: hidden;
   }
 }
 

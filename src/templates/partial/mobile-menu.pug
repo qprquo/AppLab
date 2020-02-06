@@ -1,6 +1,8 @@
 .mobile-menu
   ul.mobile-menu__menu.menu
     -var nav = htmlWebpackPlugin.options.global.navMenu;
+    button.mobile-menu__close.toggle.toggle--cross
+      .toggle__inner
     each navItem in nav
       +menuItem(navItem.title, navItem.link)
   button.button.mobile-menu__try-btn Try for free
