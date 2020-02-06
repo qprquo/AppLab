@@ -206,4 +206,9 @@ a {
       }
     }
   }
+  @media screen and (max-width: 320px) {
+    .content-wrapper {
+      transform: translateX(-100vw);
+    }
+  }
 }

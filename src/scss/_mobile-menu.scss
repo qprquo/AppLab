@@ -4,9 +4,8 @@
   top: 0;
   right: 0;
   width: $mobile-menu-width;
-  border-left: 1px solid $border-color;
   height: 100%;
-  padding: 40px 40px 20px 40px;
+  padding: 50px 40px 20px 40px;
   overflow-y: auto;
   transform: translateX($mobile-menu-width);
   transition: $content-transition;
@@ -25,7 +24,12 @@
 
   &__close {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 25px;
+    right: 25px;
+  }
+
+  @media screen and (max-width: 320px) {
+    width: 100vw;
+    transform: translateX(100%);
   }
 }

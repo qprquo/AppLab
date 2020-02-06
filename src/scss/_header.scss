@@ -86,6 +86,8 @@
 
   @include media-breakpoint-down(lg) {
     padding: 20px 0;
+  }
+  @include media-breakpoint-down(sm) {
     box-shadow: $header-box-shadow;
   }
 }
