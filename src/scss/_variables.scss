@@ -13,6 +13,11 @@ $grid-breakpoints: (
   xl: 1400px
 ) !default;
 
+$font-sizes: (
+  '40': 40px,
+  '30': 30px
+);
+
 $black: #000;
 $primary: #2500f9;
 $accent: #242f51;

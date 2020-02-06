@@ -1,0 +1,15 @@
+@each $breakpoint, $breakpoint-value in $grid-breakpoints {
+  @each $font-size, $font-size-value in $font-sizes {
+    @if $breakpoint-value == 0 {
+      .font-#{$font-size} {
+        font-size: $font-size-value !important;
+      }
+    } @else {
+      .font-#{$font-size}-#{$breakpoint} {
+        @media screen and (max-width: $breakpoint-value) {
+          font-size: $font-size-value !important;
+        }
+      }
+    }
+  }
+}

@@ -120,10 +120,6 @@ a {
   &--downloads {
     font-size: 48px;
   }
-
-  @include media-breakpoint-down(sm) {
-    font-size: 30px;
-  }
 }
 
 .to-top {

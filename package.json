@@ -40,6 +40,7 @@
     "aos": "^2.3.4",
     "css-loader": "^3.4.2",
     "exports-loader": "^0.7.0",
+    "lity": "^2.4.0",
     "popper.js": "^1.16.1",
     "style-loader": "^0.23.1"
   }

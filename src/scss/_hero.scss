@@ -13,9 +13,6 @@
   &__title {
     font-size: 60px;
     margin-bottom: 25px;
-    @include media-breakpoint-down(md) {
-      font-size: 40px;
-    }
   }
 
   &__subtitle {
@@ -81,9 +78,7 @@
   &__phone {
     height: auto;
     width: 90%;
-    margin-top: -40px;
     @include media-breakpoint-down(sm) {
-      margin-top: 0;
     }
   }
 

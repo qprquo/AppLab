@@ -1,7 +1,7 @@
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/mixins";
-@import "../../node_modules/aos/dist/aos";
 @import "../../node_modules/slick-carousel/slick/slick";
+@import "../../node_modules/lity/dist/lity";
 
 // override and add new variables
 @import "variables";
@@ -19,7 +19,6 @@
 @import "../../node_modules/bootstrap/scss/utilities/position";
 @import "../../node_modules/bootstrap/scss/utilities/display";
 @import "../../node_modules/bootstrap/scss/buttons";
-@import "../../node_modules/bootstrap/scss/modal";
 @import "../../node_modules/bootstrap/scss/utilities/embed";
 @import "../../node_modules/bootstrap/scss/utilities/spacing";
 @import "../../node_modules/bootstrap/scss/utilities/display";
@@ -30,6 +29,7 @@
 @import "sprites/sprite";
 
 @import "global";
+@import "font-sizes";
 @import "toggle";
 @import "sliders";
 @import "section";
