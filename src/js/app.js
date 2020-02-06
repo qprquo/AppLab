@@ -14,10 +14,7 @@ $(() => {
   })
 
   $('.mobile-menu').click((e) => {
-    if ($(e.target).hasClass('mobile-menu__close')) {
-      return true
-    }
-    return false;
+    return $(e.target).hasClass('mobile-menu__close');
   })
 
   $(document).on('click', (e) => {
