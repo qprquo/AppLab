@@ -22,7 +22,7 @@ button:focus {
   outline: 0;
 }
 
-nput[type="text"]::-ms-clear {
+input[type="text"]::-ms-clear {
   display: none;
   width: 0;
   height: 0;
@@ -40,8 +40,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 body {
-  &::after {
-  }
+  
   overflow-x: hidden;
   position: relative;
   @include media-breakpoint-down(sm) {
@@ -93,14 +92,16 @@ a {
   transform: translateX(0);
   transition: $content-transition;
   &::after {
-    /* content: ''; */
+    display: none;
+    content: '';
     position: absolute;
     z-index: 2;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    background: rgba($black, 0.3);
+    background-color: rgba($black, 0.3);
+    transition: opactiy 0.3s linear;
   }
 }
 
@@ -187,9 +188,9 @@ a {
   }
 }
 
-.overflow-x-sm {
+.overflow-x-auto-sm {
   @include media-breakpoint-down(sm) {
-    overflow-x: hidden;
+    overflow-x: auto;
   }
 }
 
@@ -202,7 +203,7 @@ a {
     .content-wrapper {
       transform: translateX(-$mobile-menu-width);
       &::after {
-        content: '';
+        display: block;
       }
     }
   }

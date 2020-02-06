@@ -8,6 +8,7 @@ const data = require('./data/data');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
 const SpritesmithPlugin = require('webpack-spritesmith');
 const SvgSpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const split = require('webpack')
 const glob = require('glob').sync;
 
 
@@ -26,6 +27,7 @@ module.exports = (env, argv) => {
     },
     output: {
       filename: 'js/[name].js',
+      chunkFilename: 'js/[name].js',
       path: path.resolve(__dirname, 'dist')
     },
     devtool: argv.mode !== 'production' ? 'source-map' : false,
@@ -40,6 +42,16 @@ module.exports = (env, argv) => {
             } : null
           }
         })],
+      splitChunks: {
+        cacheGroups: {
+          vendor: {
+            test: /node_modules/,
+            chunks: 'initial',
+            name: 'vendor',
+            enforce: true
+          }
+        }
+      }
     },
     plugins: [
       new MiniCssExtractPlugin({
