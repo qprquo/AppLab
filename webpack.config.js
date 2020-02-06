@@ -8,16 +8,11 @@ const data = require('./data/data');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
 const SpritesmithPlugin = require('webpack-spritesmith');
 const SvgSpriteLoaderPlugin = require('svg-sprite-loader/plugin');
-const split = require('webpack')
-const glob = require('glob').sync;
-
 
 const TEMPLATES_DIR = './src/templates/pages';
 const TEMPLATES = fs.readdirSync(TEMPLATES_DIR).filter(filename => filename.endsWith('.pug'));
 
 module.exports = (env, argv) => {
-
-
   return {
     entry: {
       app: [
