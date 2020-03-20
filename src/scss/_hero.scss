@@ -44,6 +44,10 @@
     border-radius: 17px;
     position: relative;
     margin-bottom: 30px;
+    font-size: 14px;
+    @include media-breakpoint-up(md) {
+      font-size: $font-size-base;
+    }
   }
 
   &__award-inner {

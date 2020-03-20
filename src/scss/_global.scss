@@ -88,21 +88,9 @@ a {
 .content-wrapper {
   overflow: hidden;
   position: relative;
-  z-index: 2;
+  z-index: 1;
   transform: translateX(0);
   transition: $content-transition;
-  &::after {
-    display: none;
-    content: '';
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: rgba($black, 0.3);
-    transition: opactiy 0.3s linear;
-  }
 }
 
 .heading {
@@ -195,11 +183,14 @@ a {
     .mobile-menu {
       transform: translate(0);
     }
+
     .content-wrapper {
       transform: translateX(-$mobile-menu-width);
-      &::after {
-        display: block;
-      }
+    }
+
+    .mobile-menu-overlay {
+      visibility: visible;
+      opacity: 1;
     }
   }
   @media screen and (max-width: 320px) {

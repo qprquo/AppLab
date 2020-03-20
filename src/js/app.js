@@ -5,21 +5,21 @@ import './switch';
 import 'slick-carousel';
 import 'lity';
 
-
 $(() => {
-  const body = $('body');
+  const body = $(document.body);
   const menuToggle = $('.header__menu-toggle');
+  const menuClose = $('.mobile-menu__close');
+
   menuToggle.click((e) => {
     e.stopPropagation();
-    body.toggleClass('mobile-menu-is-shown');
+    body.addClass('mobile-menu-is-shown');
+  });
+
+  menuClose.click((e) => {
+    body.removeClass("mobile-menu-is-shown");
   })
 
-  $('.mobile-menu').click((e) => {
-    return $(e.target).hasClass('mobile-menu__close');
-  })
-
-  $(document).on('click', (e) => {
-    console.log('document click');
+  $(".mobile-menu-overlay").on('click', (e) => {
     body.removeClass('mobile-menu-is-shown');
   })
 
@@ -46,7 +46,7 @@ $(() => {
 
   $('.banners-slider').slick({
     mobileFirst: true,
-    infinite: false,
+    infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
@@ -56,7 +56,4 @@ $(() => {
       settings: "unslick"
     }]
   });
-
-
-
 });
